@@ -1,3 +1,5 @@
+import os
+
 from external_services.traccar_api.api import TraccarApi
 from helpers.common import validate_phone_number
 
@@ -21,9 +23,21 @@ def get_captain_device(captains_list: list, device_list: list) -> list:
     return pears
 
 
-URL = "https://iara-prior-notification.scrtl.xyz"
-MAIL = "n.vlahovski@scortel.com"
-PASS = "admin"
+def_config = [
+    os.environ.get("TRACCAR_URL_DEV"),
+    os.environ.get("TRACCAR_MAIL_DEV"),
+    os.environ.get("TRACCAR_PASS_DEV")
+]
+prod_config = [
+    os.environ.get("TRACCAR_URL_PROD"),
+    os.environ.get("TRACCAR_MAIL_PROD"),
+    os.environ.get("TRACCAR_PASS_PROD")
+]
+URL, MAIL, PASS = def_config
+
+# URL = "https://iara-prior-notification.scrtl.xyz"
+# MAIL = "n.vlahovski@scortel.com"
+# PASS = "admin"
 
 traccar = TraccarApi(URL, MAIL, PASS)
 
@@ -56,8 +70,8 @@ captains = get_captains_list(drivers)
 
 captain_devices = get_captain_device(captains, devices)
 
-for captain_id, device_id in captain_devices:
-    traccar.link_diver_device(driver_id=captain_id, device_id=device_id,)
+# for captain_id, device_id in captain_devices:
+#     traccar.link_diver_device(driver_id=captain_id, device_id=device_id, )
 
 traccar.logout()
 
