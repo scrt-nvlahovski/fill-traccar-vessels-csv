@@ -33,11 +33,8 @@ prod_config = [
     os.environ.get("TRACCAR_MAIL_PROD"),
     os.environ.get("TRACCAR_PASS_PROD")
 ]
-URL, MAIL, PASS = def_config
+URL, MAIL, PASS = prod_config
 
-# URL = "https://iara-prior-notification.scrtl.xyz"
-# MAIL = "n.vlahovski@scortel.com"
-# PASS = "admin"
 
 traccar = TraccarApi(URL, MAIL, PASS)
 
@@ -70,8 +67,8 @@ captains = get_captains_list(drivers)
 
 captain_devices = get_captain_device(captains, devices)
 
-# for captain_id, device_id in captain_devices:
-#     traccar.link_diver_device(driver_id=captain_id, device_id=device_id, )
+for captain_id, device_id in captain_devices:
+    traccar.link_diver_device(driver_id=captain_id, device_id=device_id, )
 
 traccar.logout()
 
