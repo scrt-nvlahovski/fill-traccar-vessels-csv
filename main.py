@@ -1,6 +1,7 @@
 import os
 
 from external_services.traccar_api.api import TraccarApi
+from external_services.traccar_api.traccar_errors.traccar_api_errors import *
 from helpers.common import validate_phone_number
 
 
@@ -42,7 +43,7 @@ def check_device_attributes_name(device_object: dict) -> dict:
         for attribute, value in device_object['attributes'].copy().items():
             attribute_name_list = attribute.split('_')
             if len(attribute_name_list) > 1:
-                new_attribute_name = attribute_name_list[0]+str(attribute_name_list[1]).capitalize()
+                new_attribute_name = attribute_name_list[0] + str(attribute_name_list[1]).capitalize()
                 if new_attribute_name not in device_object['attributes']:
                     device_object['attributes'][new_attribute_name] = value
                     del device_object['attributes'][attribute]
@@ -59,15 +60,21 @@ prod_config = [
     os.environ.get("TRACCAR_MAIL_PROD"),
     os.environ.get("TRACCAR_PASS_PROD")
 ]
-URL, MAIL, PASS = prod_config
+URL, MAIL, PASS = def_config
 
-traccar = TraccarApi(URL, MAIL, PASS)
+traccar = TraccarApi(URL, MAIL, 'PASS')
+try:
+    traccar.login()
+except TraccarApiAuthenticationError as e:
+    print(f"Authentication error: {e}")
+except TraccarApiError as e:
+    print(f"API error: {e}")
 
-current_user = traccar.login()
+# current_user = traccar.login()
 
 # Bulks
 # server = traccar.get_server()
-devices = traccar.get_devices()
+# devices = traccar.get_devices()
 # devices_criteria = traccar.get_device(device_ids=[3, 38], device_unique_ids=["01442517SKYD066", "01433630SKYC6D3"])
 # users = traccar.get_users()
 # drivers = traccar.get_drivers()
@@ -76,8 +83,9 @@ devices = traccar.get_devices()
 # device = traccar.get_device(device_unique_ids=["01433630SKYC6D3"])
 # user = traccar.get_user(1)
 # driver = traccar.get_driver(301)
-# # Permissions
-# permissions = traccar.get_current_user_permissions()
+# # Resources
+# resources = traccar.get_current_user_resources()
+# # Links
 # link_driver1_device1 = traccar.link_diver_device(driver_id=301, device_id=3)
 # link_driver2_device1 = traccar.link_diver_device(driver_id=302, device_id=3)
 # unlink_driver1_device1 = traccar.unlink_diver_device(driver_id=301, device_id=3)
@@ -95,10 +103,14 @@ devices = traccar.get_devices()
 # for captain_id, device_id in captain_devices:
 #     traccar.link_diver_device(driver_id=captain_id, device_id=device_id, )
 
-for device in devices:
-    set_device_category(device)
-    check_device_attributes_name(device)
-    print(traccar.update_device(device))
-traccar.logout()
-
+# for device in devices:
+#     set_device_category(device)
+#     check_device_attributes_name(device)
+#     # print(traccar.update_device(device))
+try:
+    traccar.logout()
+except TraccarApiAuthenticationError as e:
+    print(f"Authentication error: {e}")
+except TraccarApiError as e:
+    print(f"API error: {e}")
 print()
