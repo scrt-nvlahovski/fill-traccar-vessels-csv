@@ -16,11 +16,37 @@ def get_captain_device(captains_list: list, device_list: list) -> list:
     pears = []
     for captain in captains_list:
         captain_id = captain['uniqueId']
-        for device in device_list:
-            if 'contact_phone' in device['attributes'] and validate_phone_number(
-                    device['attributes']['contact_phone']) == captain_id:
-                pears.append((captain['id'], device['id']))
+        for device_object in device_list:
+            if 'contactPhone' in device_object['attributes'] and validate_phone_number(
+                    device_object['attributes']['contactPhone']) == captain_id:
+                pears.append((captain['id'], device_object['id']))
     return pears
+
+
+def set_device_category(device_object: dict) -> dict:
+    if 'length' in device_object['attributes']:
+        if float(device_object['attributes']['length']) > 14.99:
+            category = "ship"
+        else:
+            category = "boat"
+    else:
+        category = "default"
+    if device_object['category'] != category:
+        device_object['category'] = category
+
+    return device_object
+
+
+def check_device_attributes_name(device_object: dict) -> dict:
+    if 'attributes' in device_object:
+        for attribute, value in device_object['attributes'].copy().items():
+            attribute_name_list = attribute.split('_')
+            if len(attribute_name_list) > 1:
+                new_attribute_name = attribute_name_list[0]+str(attribute_name_list[1]).capitalize()
+                if new_attribute_name not in device_object['attributes']:
+                    device_object['attributes'][new_attribute_name] = value
+                    del device_object['attributes'][attribute]
+    return device_object
 
 
 def_config = [
@@ -35,7 +61,6 @@ prod_config = [
 ]
 URL, MAIL, PASS = prod_config
 
-
 traccar = TraccarApi(URL, MAIL, PASS)
 
 current_user = traccar.login()
@@ -45,7 +70,7 @@ current_user = traccar.login()
 devices = traccar.get_devices()
 # devices_criteria = traccar.get_device(device_ids=[3, 38], device_unique_ids=["01442517SKYD066", "01433630SKYC6D3"])
 # users = traccar.get_users()
-drivers = traccar.get_drivers()
+# drivers = traccar.get_drivers()
 # groups = traccar.get_groups()
 # # Singles
 # device = traccar.get_device(device_unique_ids=["01433630SKYC6D3"])
@@ -63,13 +88,17 @@ drivers = traccar.get_drivers()
 
 # LogOut
 
-captains = get_captains_list(drivers)
+# captains = get_captains_list(drivers)
 
-captain_devices = get_captain_device(captains, devices)
+# captain_devices = get_captain_device(captains, devices)
 
-for captain_id, device_id in captain_devices:
-    traccar.link_diver_device(driver_id=captain_id, device_id=device_id, )
+# for captain_id, device_id in captain_devices:
+#     traccar.link_diver_device(driver_id=captain_id, device_id=device_id, )
 
+for device in devices:
+    set_device_category(device)
+    check_device_attributes_name(device)
+    print(traccar.update_device(device))
 traccar.logout()
 
 print()

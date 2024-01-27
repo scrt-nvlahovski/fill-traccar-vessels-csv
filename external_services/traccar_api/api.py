@@ -3,7 +3,6 @@ import warnings
 import requests
 from requests.auth import HTTPBasicAuth
 
-
 warnings.filterwarnings('ignore', message='Unverified HTTPS request')
 warnings.filterwarnings('ignore', message='NotOpenSSLWarning')
 
@@ -221,7 +220,6 @@ class TraccarApi:
             else:
                 print(f'ERROR: {response.status_code} - {response.text}')
                 return None
-
         else:
             print(f'Error: missing session')
             return None
@@ -238,7 +236,6 @@ class TraccarApi:
             else:
                 print(f'ERROR: {response.status_code} - {response.text}')
                 return None
-
         else:
             print(f'Error: missing session')
             return None
@@ -255,7 +252,6 @@ class TraccarApi:
             else:
                 print(f'ERROR: {response.status_code} - {response.text}')
                 return None
-
         else:
             print(f'Error: missing session')
             return None
@@ -272,7 +268,19 @@ class TraccarApi:
             else:
                 print(f'ERROR: {response.status_code} - {response.text}')
                 return response.status_code
+        else:
+            print(f'Error: missing session')
+            return None
 
+    def update_device(self, device: dict) -> any:
+        url = f'{self.__traccar_api_url}/api/devices/{device["id"]}'
+        if self.__traccar_api_session is not None:
+            response = self.__traccar_api_session.put(url, headers={'Content-Type': 'application/json'}, json=device)
+            if response.status_code == 200 or response.status_code == 400:
+                return response.status_code
+            else:
+                print(f'ERROR: {response.status_code} - {response.text}')
+                return response.status_code
         else:
             print(f'Error: missing session')
             return None
