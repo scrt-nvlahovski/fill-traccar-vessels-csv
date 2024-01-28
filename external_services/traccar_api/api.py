@@ -71,6 +71,9 @@ class TraccarApi:
                 response.raise_for_status()
 
                 print('Logout successful')
+                self.__traccar_api_session.cookies.clear()
+                self.__traccar_api_session.close()
+
                 self.__traccar_api_session = None
                 self.set_traccar_api_token(None)
 
@@ -186,7 +189,7 @@ class TraccarApi:
         if user_id:
             params['userId'] = user_id
         if device_ids:
-            params['id'] = device_ids
+            params['deviceId'] = device_ids
         if group_ids:
             params['groupId'] = group_ids
         if refresh is not None:
@@ -194,6 +197,7 @@ class TraccarApi:
         if self.__traccar_api_session:
             try:
                 response = self.__traccar_api_session.get(url, params=params)
+                u = response.url
                 response.raise_for_status()
                 return response.json()
             except requests.exceptions.RequestException as e:
@@ -201,7 +205,7 @@ class TraccarApi:
         else:
             raise TraccarApiError("Error: Missing session for get_drivers.")
 
-    def get_driver(self, driver_id):
+    def get_driver(self, driver_id: int):
         url = f"{self.__traccar_api_url}/api/drivers/{driver_id}"
         if self.__traccar_api_session:
             try:
@@ -326,6 +330,7 @@ class TraccarApi:
                 response = self.__traccar_api_session.put(url, headers={'Content-Type': 'application/json'},
                                                           json=device)
                 response.raise_for_status()
+                return response.json()
             except requests.exceptions.RequestException as e:
                 raise TraccarApiError(f"Failed to update device: {str(e)}")
         else:
@@ -533,3 +538,19 @@ class TraccarApi:
                 raise TraccarApiError(f"Failed to retrieve statistics: {str(e)}")
         else:
             raise TraccarApiError("Error: Missing session for get_statistics.")
+
+    def get_ports(self, *, port_ids: list = None):
+        url = f"{self.__traccar_api_url}/api/ports"
+        params = {}
+        if port_ids:
+            params['id'] = port_ids
+
+        if self.__traccar_api_session:
+            try:
+                response = self.__traccar_api_session.get(url, params=params)
+                response.raise_for_status()
+                return response.json()
+            except requests.exceptions.RequestException as e:
+                raise TraccarApiError(f"Failed to retrieve ports: {str(e)}")
+        else:
+            raise TraccarApiError("Error: Missing session for get_ports.")

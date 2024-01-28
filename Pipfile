@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 unidecode = "*"
 requests-pkcs12 = "*"
+requests = "*"
 
 [dev-packages]
 
