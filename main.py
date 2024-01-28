@@ -59,7 +59,7 @@ if vessel_dict:
     vessel.disabled = vessel_dict["disabled"] if vessel_dict["disabled"] else True
     vessel.lastUpdate = vessel_dict["lastUpdate"] if vessel_dict["lastUpdate"] else None
     vessel.positionId = vessel_dict["positionId"] if vessel_dict["positionId"] else -1
-    vessel.groupId = vessel_dict["groupId"]  if vessel_dict["groupId"] else -1
+    vessel.groupId = vessel_dict["groupId"] if vessel_dict["groupId"] else -1
     vessel.phone = vessel_dict["phone"] if vessel_dict["phone"] else ""
     vessel.model = vessel_dict["model"] if vessel_dict["model"] else ""
     vessel.contact = vessel_dict["contact"] if vessel_dict["contact"] else ""
@@ -76,5 +76,5 @@ if vessel_dict:
                         }
                    )
 print(vessel.get("ip"))
-print(vessel.getOrDefault("captain", {"captain": {}}))
+print(vessel.get_or_default("captain", {"captain": {}}))
 print(vessel.to_dict())

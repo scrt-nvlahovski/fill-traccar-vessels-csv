@@ -125,13 +125,13 @@ class Vessel:
         if attribute in self.__attributes:
             return self.__attributes[attribute]
 
-    def getOrDefault(self, attribute: str, default: any) -> any:
+    def get_or_default(self, attribute: str, default: any) -> any:
         if attribute in self.__attributes:
             return self.__attributes[attribute]
         else:
             return default
 
-    def setAttributes(self, attributes: dict) -> None:
+    def set_attributes(self, attributes: dict) -> None:
         if isinstance(attributes, dict):
             self.__attributes.update(attributes)
         else:
