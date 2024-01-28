@@ -24,7 +24,11 @@ prod_config = [
 ]
 
 URL, MAIL, PASS = prod_config
+
 current_user = None
+vessel_dict = None
+captain = None
+
 traccar = TraccarApi(*def_config)
 
 try:
@@ -33,16 +37,16 @@ except TraccarApiAuthenticationError as e:
     print(f"Authentication error: {e}")
 except TraccarApiError as e:
     print(f"API error: {e}")
-
-vessel_dict = traccar.get_device(device_unique_ids=["01442545SKY40F2"])[0]
-captain = traccar.get_drivers(device_ids=[vessel_dict["id"]])[0]
-vessel_dict["captain"] = captain
-try:
-    traccar.logout()
-except TraccarApiAuthenticationError as e:
-    print(f"Authentication error: {e}")
-except TraccarApiError as e:
-    print(f"API error: {e}")
+if current_user:
+    vessel_dict = traccar.get_device(device_unique_ids=["01442545SKY40F2"])[0]
+    captain = traccar.get_drivers(device_ids=[vessel_dict["id"]])[0]
+    vessel_dict["captain"] = captain
+    try:
+        traccar.logout()
+    except TraccarApiAuthenticationError as e:
+        print(f"Authentication error: {e}")
+    except TraccarApiError as e:
+        print(f"API error: {e}")
 
 vessel = Vessel()
 
@@ -62,7 +66,7 @@ if vessel_dict:
     vessel.category = vessel_dict["category"] if vessel_dict["category"] else ""
     for attribute, value in vessel_dict["attributes"].items():
         vessel.set(attribute, value)
-    if "isCaptain" in captain['attributes'] and captain['attributes']['isCaptain'] is True:
+    if "attributes" in captain and "isCaptain" in captain['attributes'] and captain['attributes']['isCaptain'] is True:
         vessel.set("captain",
                    {
                         "id": captain["id"],
