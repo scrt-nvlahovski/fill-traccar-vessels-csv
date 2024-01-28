@@ -48,18 +48,18 @@ vessel = Vessel()
 
 if vessel_dict:
 
-    vessel.name = vessel_dict["name"]
-    vessel.id = vessel_dict["id"]
-    vessel.uniqueId = vessel_dict["uniqueId"]
-    vessel.status = vessel_dict["status"]
-    vessel.disabled = vessel_dict["disabled"]
-    vessel.lastUpdate = vessel_dict["lastUpdate"]
-    vessel.positionId = vessel_dict["positionId"]
-    vessel.groupId = vessel_dict["groupId"]
-    vessel.phone = vessel_dict["phone"]
-    vessel.model = vessel_dict["model"]
-    vessel.contact = vessel_dict["contact"]
-    vessel.category = vessel_dict["category"]
+    vessel.name = vessel_dict["name"] if vessel_dict["name"] else ""
+    vessel.id = vessel_dict["id"] if vessel_dict["id"] else ""
+    vessel.uniqueId = vessel_dict["uniqueId"] if vessel_dict["uniqueId"] else ""
+    vessel.status = vessel_dict["status"] if vessel_dict["status"] else ""
+    vessel.disabled = vessel_dict["disabled"] if vessel_dict["disabled"] else True
+    vessel.lastUpdate = vessel_dict["lastUpdate"] if vessel_dict["lastUpdate"] else None
+    vessel.positionId = vessel_dict["positionId"] if vessel_dict["positionId"] else -1
+    vessel.groupId = vessel_dict["groupId"]  if vessel_dict["groupId"] else -1
+    vessel.phone = vessel_dict["phone"] if vessel_dict["phone"] else ""
+    vessel.model = vessel_dict["model"] if vessel_dict["model"] else ""
+    vessel.contact = vessel_dict["contact"] if vessel_dict["contact"] else ""
+    vessel.category = vessel_dict["category"] if vessel_dict["category"] else ""
     for attribute, value in vessel_dict["attributes"].items():
         vessel.set(attribute, value)
     if "isCaptain" in captain['attributes'] and captain['attributes']['isCaptain'] is True:
@@ -71,5 +71,6 @@ if vessel_dict:
                         "nameEn": captain["attributes"]["nameEn"]
                         }
                    )
-
+print(vessel.get("ip"))
+print(vessel.getOrDefault("captain", {"captain": {}}))
 print(vessel.to_dict())
