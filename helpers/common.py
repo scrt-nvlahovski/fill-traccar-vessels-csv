@@ -39,3 +39,11 @@ def validate_phone_number(phone_number):
         return None
     else:
         return None
+
+
+def search_list_dicts(attribute: str, value: any, data: list) -> list:
+    return [element for element in data if element[attribute] == value]
+
+
+def search_vessel_attribute(attribute: str, value: any, data: list) -> list:
+    return [element for element in data if attribute in element["attributes"] and element["attributes"][attribute] == value]

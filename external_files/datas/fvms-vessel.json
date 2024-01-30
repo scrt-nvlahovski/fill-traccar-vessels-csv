@@ -1,0 +1,492 @@
+[
+  {
+    "name": "Demo1",
+    "uniqueid": "01142337SKY9982",
+    "cfr": ""
+  },
+  {
+    "name": "АКУЛА-1",
+    "uniqueid": "01442525SKYF08E",
+    "cfr": "BGR001028535"
+  },
+  {
+    "name": "АМБЪР",
+    "uniqueid": "01323798SKY45AB",
+    "cfr": "BGR001024496"
+  },
+  {
+    "name": "АФАЛА I",
+    "uniqueid": "01323687SKY0780",
+    "cfr": "BGR001024145"
+  },
+  {
+    "name": "БАРБУН",
+    "uniqueid": "01433630SKYC6D3",
+    "cfr": "BGR001027979"
+  },
+  {
+    "name": "БИЗОНЕ-1",
+    "uniqueid": "01435426SKYF9E7",
+    "cfr": "BGR001027432"
+  },
+  {
+    "name": "БЛ 2133",
+    "uniqueid": "01435428SKY01F1",
+    "cfr": "BGR001422133"
+  },
+  {
+    "name": "БОРЕЙ",
+    "uniqueid": "01442548SKYCD01",
+    "cfr": "BGR001027177"
+  },
+  {
+    "name": "БС 041",
+    "uniqueid": "01442531SKY08AC",
+    "cfr": "BGR002040041"
+  },
+  {
+    "name": "БУМЕРАНГ",
+    "uniqueid": "01323690SKY938F",
+    "cfr": "BGR002031477"
+  },
+  {
+    "name": "ВЕНИ",
+    "uniqueid": "01323678SKY6353",
+    "cfr": "BGR001022998"
+  },
+  {
+    "name": "ВИКИНГ",
+    "uniqueid": "01435479SKY4EF0",
+    "cfr": "BGR002020176"
+  },
+  {
+    "name": "ВИКТОРИЯ",
+    "uniqueid": "01323709SKY5FEE",
+    "cfr": "BGR001024562"
+  },
+  {
+    "name": "ВН 3341",
+    "uniqueid": "01435483SKY5F04",
+    "cfr": "BGR001023341"
+  },
+  {
+    "name": "ВН 4601",
+    "uniqueid": "01435462SKY8A9B",
+    "cfr": "BGR001024601"
+  },
+  {
+    "name": "ВН 7822",
+    "uniqueid": "01323715SKY780C",
+    "cfr": "BGR001027822"
+  },
+  {
+    "name": "ВН 8112",
+    "uniqueid": "01323728SKY2C4D",
+    "cfr": "BGR002020102"
+  },
+  {
+    "name": "ВЪЛНОБОР",
+    "uniqueid": "01435445SKYC646",
+    "cfr": "BGR002020181"
+  },
+  {
+    "name": "ГЕРГАНА",
+    "uniqueid": "01433631SKY4AD8",
+    "cfr": "BGR001024591"
+  },
+  {
+    "name": "ГОНДОЛА",
+    "uniqueid": "01442517SKYD066",
+    "cfr": "BGR001024321"
+  },
+  {
+    "name": "ГЪНЪР",
+    "uniqueid": "01442521SKYE07A",
+    "cfr": "BGR002030678"
+  },
+  {
+    "name": "ДАНИ",
+    "uniqueid": "01323721SKY902A",
+    "cfr": "BGR001325040"
+  },
+  {
+    "name": "ДАНЧОВОТО ГЕОРГИ",
+    "uniqueid": "01435470SKYAAC3",
+    "cfr": "BGR001010408"
+  },
+  {
+    "name": "ДАРИНА",
+    "uniqueid": "01442513SKYC052",
+    "cfr": "BGR001022966"
+  },
+  {
+    "name": "ДЕЛТА",
+    "uniqueid": "01323774SKYE533",
+    "cfr": "BGR001010390"
+  },
+  {
+    "name": "ДЕЛФИН Х",
+    "uniqueid": "01435478SKYCAEB",
+    "cfr": "BGR001226275"
+  },
+  {
+    "name": "ДИАМАНТ",
+    "uniqueid": "01435481SKY56FA",
+    "cfr": "BGR001027141"
+  },
+  {
+    "name": "ДИАНА",
+    "uniqueid": "01442530SKY84A7",
+    "cfr": "BGR001027669"
+  },
+  {
+    "name": "ЕГЕО 1",
+    "uniqueid": "01323737SKYD07A",
+    "cfr": "BGR001028428"
+  },
+  {
+    "name": "ЕГЕО 2",
+    "uniqueid": "01142338SKY1D87",
+    "cfr": "BGR001028339"
+  },
+  {
+    "name": "ЕГЕО 3",
+    "uniqueid": "01435433SKY960A",
+    "cfr": "BGR001028195"
+  },
+  {
+    "name": "ЕЛЕКТА",
+    "uniqueid": "01323716SKYFC11",
+    "cfr": "BGR002130401"
+  },
+  {
+    "name": "ЕЛИС",
+    "uniqueid": "01323770SKYD51F",
+    "cfr": "BGR001325322"
+  },
+  {
+    "name": "ЕСМЕРАЛДА",
+    "uniqueid": "01435471SKY2EC8",
+    "cfr": "BGR001023068"
+  },
+  {
+    "name": "ИАРА 1",
+    "uniqueid": "01435436SKY2219",
+    "cfr": "LZF2233"
+  },
+  {
+    "name": "ИАРА 2",
+    "uniqueid": "01435441SKYB632",
+    "cfr": "LZF2233"
+  },
+  {
+    "name": "ИАРА 22",
+    "uniqueid": "01435446SKY4A4B",
+    "cfr": "LZF2234"
+  },
+  {
+    "name": "ИАРА 3",
+    "uniqueid": "01435437SKYA61E",
+    "cfr": "LZFзззз"
+  },
+  {
+    "name": "ИАРА 4",
+    "uniqueid": "01435440SKY322D",
+    "cfr": ""
+  },
+  {
+    "name": "ИВА-1",
+    "uniqueid": "01442522SKY647F",
+    "cfr": "BGR001028194"
+  },
+  {
+    "name": "ИВАНА",
+    "uniqueid": "01142331SKY8164",
+    "cfr": "BGR001226231"
+  },
+  {
+    "name": "ИНТИ-2",
+    "uniqueid": "01435439SKYAE28",
+    "cfr": "BGR002130820"
+  },
+  {
+    "name": "ИРИНА",
+    "uniqueid": "01323694SKYA3A3",
+    "cfr": "BGR001010440"
+  },
+  {
+    "name": "ИЩАР",
+    "uniqueid": "01442516SKY4C61",
+    "cfr": "BGR002121182"
+  },
+  {
+    "name": "КАЛИАКРА",
+    "uniqueid": "01323704SKYCBD5",
+    "cfr": "BGR001028110"
+  },
+  {
+    "name": "КИРИЛ 45",
+    "uniqueid": "01323782SKY055B",
+    "cfr": "BGR002010280"
+  },
+  {
+    "name": "КОРСАР",
+    "uniqueid": "01435420SKYE1C9",
+    "cfr": "BGR002020141"
+  },
+  {
+    "name": "КОРСАР II",
+    "uniqueid": "01442540SKYACD9",
+    "cfr": "BGR002020155"
+  },
+  {
+    "name": "КРАСИ",
+    "uniqueid": "01435474SKYBAD7",
+    "cfr": "BGR001028147"
+  },
+  {
+    "name": "ЛАВРАК",
+    "uniqueid": "01435482SKYDAFF",
+    "cfr": "BGR001027149"
+  },
+  {
+    "name": "ЛЕФЕР",
+    "uniqueid": "01323708SKYDBE9",
+    "cfr": "BGR001027182"
+  },
+  {
+    "name": "ЛИБРА",
+    "uniqueid": "01442527SKYF898",
+    "cfr": "BGR001028311"
+  },
+  {
+    "name": "МАКСИМ",
+    "uniqueid": "01323797SKYC1A6",
+    "cfr": "BGR002030048"
+  },
+  {
+    "name": "МЕДУЗА 3",
+    "uniqueid": "01323814SKY85FB",
+    "cfr": "BGR002010288"
+  },
+  {
+    "name": "МОБИ ДИК",
+    "uniqueid": "01433665SKYD382",
+    "cfr": "BGR002230364"
+  },
+  {
+    "name": "НЕПТУН-70",
+    "uniqueid": "01323799SKYC9B0",
+    "cfr": "BGR001226321"
+  },
+  {
+    "name": "НИКО",
+    "uniqueid": "01323666SKY3317",
+    "cfr": "BGR002020152"
+  },
+  {
+    "name": "НС 495",
+    "uniqueid": "01442519SKYD870",
+    "cfr": "BGR002130495"
+  },
+  {
+    "name": "ОДЕСОС",
+    "uniqueid": "01323662SKY2303",
+    "cfr": "BGR001027160"
+  },
+  {
+    "name": "Офис Варна",
+    "uniqueid": "01435432SKY1205",
+    "cfr": ""
+  },
+  {
+    "name": "ПЕРЛА",
+    "uniqueid": "01323810SKY75E7",
+    "cfr": "BGR001023480"
+  },
+  {
+    "name": "ПИРАНЯ",
+    "uniqueid": "01442538SKYA4CF",
+    "cfr": "BGR001028405"
+  },
+  {
+    "name": "ПРИЯТЕЛ",
+    "uniqueid": "01323734SKY446B",
+    "cfr": "BGR002020160"
+  },
+  {
+    "name": "ПЪЛДИН",
+    "uniqueid": "01323707SKY57E4",
+    "cfr": "BGR001225642"
+  },
+  {
+    "name": "РАЛИЦА",
+    "uniqueid": "01435477SKY46E6",
+    "cfr": "BGR001027110"
+  },
+  {
+    "name": "РИГЕЛ",
+    "uniqueid": "01435421SKY65CE",
+    "cfr": "BGR001024893"
+  },
+  {
+    "name": "РК 26",
+    "uniqueid": "01435473SKY36D2",
+    "cfr": "BGR002010219"
+  },
+  {
+    "name": "РК 27",
+    "uniqueid": "01435434SKY1A0F",
+    "cfr": "BGR002000102"
+  },
+  {
+    "name": "РК 28",
+    "uniqueid": "01435438SKY2A23",
+    "cfr": "BGR002010221"
+  },
+  {
+    "name": "РК 29",
+    "uniqueid": "01435442SKY3A37",
+    "cfr": "BGR002010222"
+  },
+  {
+    "name": "РК 37",
+    "uniqueid": "01435430SKY09FB",
+    "cfr": "BGR002010255"
+  },
+  {
+    "name": "РК 4",
+    "uniqueid": "01442518SKY546B",
+    "cfr": "BGR001027599"
+  },
+  {
+    "name": "РК 40",
+    "uniqueid": "01435476SKYC2E1",
+    "cfr": "BGR002030258"
+  },
+  {
+    "name": "РК 403",
+    "uniqueid": "01420143SKY8368",
+    "cfr": "BGR002020368"
+  },
+  {
+    "name": "РК 41",
+    "uniqueid": "01323697SKY2FB2",
+    "cfr": "BGR002010259"
+  },
+  {
+    "name": "РК 5",
+    "uniqueid": "01442535SKY18C0",
+    "cfr": "BGR001028186"
+  },
+  {
+    "name": "РУСАНО",
+    "uniqueid": "01435444SKY4241",
+    "cfr": "BGR001024445"
+  },
+  {
+    "name": "СВЕТА АННА-1",
+    "uniqueid": "01433600SKY4E3D",
+    "cfr": "BGR001028265"
+  },
+  {
+    "name": "СВЕТИ ИЛИЯ",
+    "uniqueid": "01435427SKY7DEC",
+    "cfr": "BGR002130501"
+  },
+  {
+    "name": "СВЕТИ НИКОЛА",
+    "uniqueid": "01323700SKYBBC1",
+    "cfr": "BGR002030265"
+  },
+  {
+    "name": "СВЕТИ НИКОЛА 1",
+    "uniqueid": "01323664SKY2B0D",
+    "cfr": "BGR001024748"
+  },
+  {
+    "name": "СВЕТИ НИКОЛА I",
+    "uniqueid": "01323740SKY5C89",
+    "cfr": "BGR002030175"
+  },
+  {
+    "name": "СВЕТИ НИКОЛАЙ",
+    "uniqueid": "01435429SKY85F6",
+    "cfr": "BGR001028190"
+  },
+  {
+    "name": "СИГМА",
+    "uniqueid": "01442545SKY40F2",
+    "cfr": "BGR001027180"
+  },
+  {
+    "name": "СКАЙ МЕН",
+    "uniqueid": "01435419SKY5DC4",
+    "cfr": "BGR001024377"
+  },
+  {
+    "name": "Стенд Бургас",
+    "uniqueid": "01435475SKY3EDC",
+    "cfr": "SUR000000002"
+  },
+  {
+    "name": "Стенд Варна",
+    "uniqueid": "01442523SKYE884",
+    "cfr": "SUR000000001"
+  },
+  {
+    "name": "ТАИС",
+    "uniqueid": "01442528SKY7C9D",
+    "cfr": "BGR001010393"
+  },
+  {
+    "name": "ТЕСИ",
+    "uniqueid": "01435480SKYD2F5",
+    "cfr": "BGR001027750"
+  },
+  {
+    "name": "ТРАЯНА",
+    "uniqueid": "01442533SKY10B6",
+    "cfr": "BGR001024320"
+  },
+  {
+    "name": "ТРИГОНА",
+    "uniqueid": "01323667SKYB71C",
+    "cfr": "BGR002020171"
+  },
+  {
+    "name": "ХАРАСИМОВ МЛАДШИ",
+    "uniqueid": "01323720SKY0C25",
+    "cfr": "BGR001010422"
+  },
+  {
+    "name": "ХЕРМЕС 3",
+    "uniqueid": "01442547SKY48FC",
+    "cfr": "BGR001024926"
+  },
+  {
+    "name": "ХЕРМЕС 4",
+    "uniqueid": "01442520SKY5C75",
+    "cfr": "BGR001028080"
+  },
+  {
+    "name": "ХЕРСОН",
+    "uniqueid": "01420040SKY6565",
+    "cfr": "BGR002010210"
+  },
+  {
+    "name": "ХИЩНИК",
+    "uniqueid": "01323661SKY9EFE",
+    "cfr": "BGR001226262"
+  },
+  {
+    "name": "ЦИКЛАМА VII",
+    "uniqueid": "01442515SKYC85C",
+    "cfr": "BGR001024806"
+  },
+  {
+    "name": "ЧАВДАР",
+    "uniqueid": "01433627SKY3AC4",
+    "cfr": "BGR002010095"
+  }
+]
